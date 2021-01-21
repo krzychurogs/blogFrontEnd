@@ -21,7 +21,7 @@ export class CreatepostComponent implements OnInit {
   constructor(private httpservice: ServicesPostService) {}
 
   onFileSelected(event: any) {
-    //console.log(event)
+    console.log(event);
     this.selectedFile = event.target.files[0];
   }
 
