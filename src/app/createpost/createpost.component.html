@@ -1,0 +1,30 @@
+<div class="col-md-8">
+
+
+  <!-- Blog Post -->
+  <div class="card mb-4 mt-4">
+    <div class="card-header">
+   Stwórz Post
+
+    </div>
+    <div class="card-body ">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+         <label for="title">title</label>
+         <input type="text" formControlName="entry_title">
+         <br>
+         <label for="text">text</label>
+
+         <input type="text" formControlName="entry_text">
+         <br>
+         <input type="file"  name="image" (change)="onFileSelected($event)"/>
+
+        <button type="submit"class="btn btn-primary">Stworz Post</button>
+       </form>
+
+    </div>
+  </div>
+
+  <!-- Pagination -->
+
+
+</div>

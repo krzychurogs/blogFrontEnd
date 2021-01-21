@@ -1,0 +1,27 @@
+<div class="mat-elavation z8">
+  <mat-table [dataSource]="listData">
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.entry_title}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef>Data</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.entry_date| date:'medium'}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="likes">
+        <mat-header-cell *matHeaderCellDef>Like</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.likes}}</mat-cell>
+      </ng-container>
+       <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>Edit</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button mat-icon-button (click)="editPost()"><mat-icon>launch</mat-icon></button>
+          <button mat-icon-button (click)="deletePost(element.id)" color="warn"><mat-icon>delete_outline</mat-icon></button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row  *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row;columns:displayedColumns" ></mat-row>
+
+  </mat-table>
+
+</div>

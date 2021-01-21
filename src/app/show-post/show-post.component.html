@@ -1,0 +1,17 @@
+<div class="container" *ngFor="let entry of listOfEntries">
+  <br>
+<h1>All Post</h1>
+<div class="card text-center">
+  <div class="card-header">
+    {{entry.entry_title}}
+  </div>
+  <div class="card-body">
+
+    <p class="card-text">{{entry.entry_text|slice:0:335}}</p>
+    <a class="btn btn-primary" (click)="goToDetail()">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    {{entry.entry_date| date:'medium'}}
+  </div>
+</div>
+</div>

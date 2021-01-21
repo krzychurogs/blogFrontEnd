@@ -1,0 +1,27 @@
+<div class="col-md-8">
+
+
+   <!-- Blog Post -->
+   <div class="card mb-4 mt-4">
+     <div class="card-header">
+       Zaloguj się
+
+     </div>
+     <div class="card-body ">
+       <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <label for="username">username</label>
+          <input type="text" formControlName="username">
+          <br>
+          <label for="password">password</label>
+          <input type="password" formControlName="password">
+         <button type="submit"class="btn btn-primary" routerLink="posty">Loguj</button>
+         <button  (click)="goToRegister()"><a>Nie masz Konta? Stwórz</a></button>
+       </form>
+
+     </div>
+   </div>
+
+   <!-- Pagination -->
+
+
+ </div>
