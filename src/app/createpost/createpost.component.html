@@ -1,24 +1,36 @@
-<div class="col-md-8">
 
 
   <!-- Blog Post -->
   <div class="card mb-4 mt-4">
-    <div class="card-header">
+    <div class="headerF">
    Stwórz Post
-
-    </div>
+  </div>
     <div class="card-body ">
       <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-         <label for="title">title</label>
-         <input type="text" formControlName="entry_title">
-         <br>
-         <label for="text">text</label>
 
-         <input type="text" formControlName="entry_text">
-         <br>
-         <input type="file"  name="image" (change)="onFileSelected($event)"/>
+        <div class="field">
+          <label class="matTabLabel">Tytuł artykułu</label><br>
+          <input type="text" class="input" formControlName="entry_title">
+        </div>
 
-        <button type="submit"class="btn btn-primary">Stworz Post</button>
+        <div class="field">
+         <label class="matTabLabel">Treść artykułu</label><br>
+         <mat-form-field style="width: 300px;">
+          <textarea matInput rows="20" cols="160" formControlName="entry_text" placeholder="Wpisz Tekst"></textarea>
+        </mat-form-field>
+        </div>
+        <div class="field">
+        <div class="row">
+          <div class="col-sm col-md- col- col-lg" >
+            <input type="file"  name="image" (change)="onFileSelected($event)"/>
+          </div>
+          <div class="col-sm-3 col-md-3 col-3 col-lg-2">
+            <button type="submit"class="btn btn-primary">Stworz Post</button>
+          </div>
+
+        </div>
+        </div>
+
        </form>
 
     </div>
@@ -27,4 +39,3 @@
   <!-- Pagination -->
 
 
-</div>

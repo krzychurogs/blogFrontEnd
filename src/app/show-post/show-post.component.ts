@@ -7,28 +7,30 @@ import { ServicesPostService } from '../services-post/services-post.service';
   selector: 'app-show-post',
   templateUrl: './show-post.component.html',
   styleUrls: ['./show-post.component.css'],
-  providers:[ServicesPostService]
+  providers: [ServicesPostService],
 })
 export class ShowPostComponent implements OnInit {
-
   @Input()
-  listOfEntries:Array<Post>=[];
+  listOfEntries: Array<Post> = [];
 
-  constructor(private service:ServicesPostService, private router:Router ) {
+  constructor(private service: ServicesPostService, private router: Router) {
     this.getPosts();
   }
 
-  getPosts()
-  {
-    this.service.getPost().subscribe(post =>
-      {
-        this.listOfEntries=post
-      });
+  getPosts() {
+    this.service.getPost().subscribe((post) => {
+      this.listOfEntries = post;
+    });
   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   goToDetail() {
     this.router.navigate(['moredetail']);
   }
-
+  likePost(id: any) {
+    console.log('num' + id);
+    window.location.reload();
+    this.service.likePost(id).subscribe((post: Post) => {
+      console.log(post);
+    });
+  }
 }

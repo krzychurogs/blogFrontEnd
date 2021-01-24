@@ -2,8 +2,11 @@
   <br>
 <h1>All Post</h1>
 <div class="card text-center">
-  <div class="card-header">
+  <div class="card-header" >
+
+
     {{entry.entry_title}}
+
   </div>
   <div class="card-body">
 
@@ -11,7 +14,20 @@
     <a class="btn btn-primary" (click)="goToDetail()">Go somewhere</a>
   </div>
   <div class="card-footer text-muted">
-    {{entry.entry_date| date:'medium'}}
+    <button mat-button (click)="likePost(entry.id)">
+      <mat-icon class="white-icon" *ngIf="!entry.likes.includes(entry.entry_author);else elseBlock">thumb_up_alt</mat-icon>
+      <ng-template #elseBlock>
+        <mat-icon class="white-icon">thumb_down_alt</mat-icon>
+      </ng-template>
+    </button>
+      <button mat-mini-fab color="accent" class="numberLike" aria-label="Example icon button with a plus one icon">
+{{entry.totalLikes}}
+        <mat-icon>favorite</mat-icon>
+      </button>
+ {{entry.entry_date| date:'medium'}}
+
   </div>
+
+
 </div>
 </div>

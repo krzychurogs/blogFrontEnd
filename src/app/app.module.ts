@@ -11,6 +11,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { MoreInfoPostComponent } from './more-info-post/more-info-post.component';
 import { RegisterComponent } from './register/register.component';
@@ -41,7 +45,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
+    MatPaginatorModule,
+    MatSortModule,
+    BrowserAnimationsModule,
     MatTableModule,
+    MatInputModule,
   ],
   providers: [ServicesPostService, AuthGuard, AuthService],
   bootstrap: [AppComponent],

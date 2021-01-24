@@ -13,6 +13,7 @@ import { Post } from './../model/post';
 })
 export class ServicesPostService {
   baseurl = 'http://127.0.0.1:8000';
+  userid?: any = localStorage.getItem('userid');
   httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
   constructor(private http: HttpClient) {}
   getPost(): Observable<Array<Post>> {
@@ -23,6 +24,13 @@ export class ServicesPostService {
 
   createPost(postdata: any): Observable<any> {
     return this.http.post(this.baseurl + '/posthandle/create/', postdata);
+  }
+  likePost(postdata: any): Observable<any> {
+    console.log(postdata);
+    return this.http.patch(
+      this.baseurl + '/posthandle/like/' + postdata + '/' + this.userid + '/',
+      {}
+    );
   }
   getUserPost(id: any): Observable<Array<Post>> {
     return this.http.get<Array<Post>>(
