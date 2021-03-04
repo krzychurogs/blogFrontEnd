@@ -1,0 +1,30 @@
+<div class="container"  >
+
+  <div class="cardList" >
+
+      <div class="nameUser">
+        <input type="search" placeholder="Szukaj" [(ngModel)]="searchTerm">
+       <p   *ngFor="let item of listOfUsers|receiverFilter:searchTerm"  (click)="getChatMessage(item.receiver.id)" >
+         
+         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">{{item.receiver.username}}<br></p>
+      </div>
+  </div>
+  <div class="messageList" >
+    <div class="infUser">
+      <h1 >{{receiverName}}</h1>
+    </div>
+    <div class="receiver" #scrollMe [scrollTop]="scrollMe.scrollHeight" >
+        <p *ngFor="let item of messagesReceiver;last as isLast"[ngClass]="{'sender': item.sender.id==10,'receiv': item.receiver.id==10,'lastsender':isLast}">
+          {{item.message}}
+
+      </div>
+      <form [formGroup]="myForm" (ngSubmit)="sendMessage()">
+        <div class="formMessage">
+          <input type="text" class="addCom"   formControlName="message">
+          <button type="submit"class="btn btn-primary addBtn">Wyślij</button>
+        </div>
+      </form>
+
+  </div>
+
+</div>
