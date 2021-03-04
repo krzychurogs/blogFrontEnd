@@ -1,27 +1,22 @@
-<div class="col-md-8">
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<div class="tlo">
 
 
-   <!-- Blog Post -->
-   <div class="card mb-4 mt-4">
-     <div class="card-header">
-       Zaloguj się
+<div class="login">
 
-     </div>
-     <div class="card-body ">
-       <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-          <label for="username">username</label>
-          <input type="text" formControlName="username">
-          <br>
-          <label for="password">password</label>
-          <input type="password" formControlName="password">
-         <button type="submit"class="btn btn-primary" routerLink="posty">Loguj</button>
-         <button  (click)="goToRegister()"><a>Nie masz Konta? Stwórz</a></button>
-       </form>
+  <div class="login-form">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <h3>Username:</h3>
+    <input type="text" formControlName="username" placeholder="Username"/><br>
+    <h3>Password:</h3>
+    <input type="password" formControlName="password" placeholder="Password"/>
+    <br>
+    <button type="submit"class="btn btn-primary" routerLink="posty">Loguj</button>
+    <br>
+    <button  class="btn btn-warning btn-inf"  (click)="goToRegister()"><a>Nie masz Konta? Stwórz</a></button>
+    <br>
+  </form>
+  </div>
+</div>
 
-     </div>
-   </div>
-
-   <!-- Pagination -->
-
-
- </div>
+</div>

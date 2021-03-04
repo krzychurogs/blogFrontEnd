@@ -1,33 +1,27 @@
-<div class="container" *ngFor="let entry of listOfEntries">
+<div class="tlo">
+  <section class="card-row">
+    <article class="card" *ngFor="let entry of listOfEntries">
+      <div>
+        <img class="image"
+        src="{{entry.image}}"
+      />
+      <h3>{{entry.entry_title}}<em><button mat-button color="primary"><mat-icon>thumb_up_alt</mat-icon> {{entry.totalLikes}}</button></em></h3>
+      <h4>{{entry.entry_date| date:'medium'}}</h4>
+    </div>
+     <div class="text-wrapper">
+      <p>
+        {{entry.entry_text|slice:0:1000}}
+      </p>
+     </div>
+      <div  class="button" color="primary"  [routerLink]="['/moredetail', entry.id]" ><mat-icon>visibility</mat-icon> More</div>
+    </article>
+
+  </section>
   <br>
-<h1>All Post</h1>
-<div class="card text-center">
-  <div class="card-header" >
-
-
-    {{entry.entry_title}}
-
-  </div>
-  <div class="card-body">
-
-    <p class="card-text">{{entry.entry_text|slice:0:335}}</p>
-    <a class="btn btn-primary" (click)="goToDetail()">Go somewhere</a>
-  </div>
-  <div class="card-footer text-muted">
-    <button mat-button (click)="likePost(entry.id)">
-      <mat-icon class="white-icon" *ngIf="!entry.likes.includes(entry.entry_author);else elseBlock">thumb_up_alt</mat-icon>
-      <ng-template #elseBlock>
-        <mat-icon class="white-icon">thumb_down_alt</mat-icon>
-      </ng-template>
-    </button>
-      <button mat-mini-fab color="accent" class="numberLike" aria-label="Example icon button with a plus one icon">
-{{entry.totalLikes}}
-        <mat-icon>favorite</mat-icon>
-      </button>
- {{entry.entry_date| date:'medium'}}
-
+  <div class="actionPag">
+    <button  *ngIf="checkpreviousurl" (click)="goPreviousPage()" mat-flat-button color="accent" >Poprzednia</button>
+    <button  *ngIf="checkurl" (click)="goNextPage()" mat-flat-button color="warn" >Następna</button>
   </div>
 
 
-</div>
 </div>

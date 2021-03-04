@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+.cardList {
+  margin-left: 10px;
+  position: absolute;
+  line-height: 100%;
+  color: white;
+  margin-top: 10px;
+  left: 0;
+  width: 20%;
+  height: 90%;
+
+  display: flex;
+  overflow-y: scroll;
+  font-size: 18px;
+  line-height: 200%;
+  padding: 25px 10px;
+  flex-direction: row;
+  background-color: #3b3e49;
+}
+.cardList img {
+  height: 70px;
+  margin-right: 30px;
+}
+.messageList {
+  margin-right: 10px;
+  position: absolute;
+  line-height: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  right: 0;
+  width: 77%;
+  height: 90%;
+  display: flex;
+  padding: 25px 10px;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+.receiver {
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  font-size: 22px;
+  margin-top: 5px;
+  position: relative;
+  padding: 10px;
+}
+.infUser {
+  height: 10%;
+  position: relative;
+  width: 100%;
+  background-color: #374455;
+}
+.infUser h1 {
+  font-weight: normal;
+  text-align: center;
+  justify-content: center;
+  color: green;
+  font-size: 1.75em;
+}
+
+.nameUser {
+  font-size: 18px;
+  line-height: 200%;
+  width: 100%;
+}
+.nameUser input {
+  margin-bottom: 20px;
+  color: white;
+  background-color: #5e616a;
+  width: 100%;
+}
+.sender {
+  background-color: #6fbced;
+  color: white;
+  max-width: min-content;
+  max-height: min-content;
+
+  margin-left: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+  border: solid 2px #dedede;
+  align-items: center;
+  height: 7%;
+}
+.receiv {
+  margin-right: 30px;
+
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color: white;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #58b666;
+  border: solid 2px #dedede;
+  align-items: center;
+
+  max-width: min-content;
+  height: 7%;
+}
+.lastsender {
+  margin-bottom: 0px;
+}
+.sender span {
+  margin-bottom: 60px;
+  color: gray;
+  font-size: 13px;
+  position: absolute;
+}
+
+.receiv span {
+  color: #bbb;
+  margin-bottom: 60px;
+  font-size: 13px;
+  position: absolute;
+}
+.time-right {
+  float: right;
+  color: #aaa;
+}
+.formMessage {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+
+  margin-left: 5px;
+  width: 100%;
+}
+.addCom {
+  width: 90%;
+
+  height: 30px;
+}
+.addBtn {
+  margin-left: 15px;
+  margin-top: 7px;
+}
+.inf {
+  width: 100%;
+  margin-right: 10px;
+
+  line-height: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 5%;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  font-size: 22px;
+
+  padding: 10px;
+}

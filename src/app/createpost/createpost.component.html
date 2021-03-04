@@ -1,41 +1,44 @@
-
-
-  <!-- Blog Post -->
-  <div class="card mb-4 mt-4">
-    <div class="headerF">
+<div class="box">
+  <div class="boxheader">
    Stwórz Post
   </div>
-    <div class="card-body ">
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+   <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
 
         <div class="field">
-          <label class="matTabLabel">Tytuł artykułu</label><br>
-          <input type="text" class="input" formControlName="entry_title">
-        </div>
-
-        <div class="field">
-         <label class="matTabLabel">Treść artykułu</label><br>
-         <mat-form-field style="width: 300px;">
-          <textarea matInput rows="20" cols="160" formControlName="entry_text" placeholder="Wpisz Tekst"></textarea>
-        </mat-form-field>
-        </div>
-        <div class="field">
-        <div class="row">
-          <div class="col-sm col-md- col- col-lg" >
-            <input type="file"  name="image" (change)="onFileSelected($event)"/>
+          <label class="boxLabel" >Tytuł artykułu</label><br>
+          <input type="text" class="form-control" formControlName="entry_title" [ngClass]="{ 'is-invalid': submitted && f.entry_title.errors }" >
+          <div *ngIf="submitted && f.entry_title.errors" class="invalid-feedback">
+            <div *ngIf="f.entry_title.errors.required">Tytuł jest wymagany </div>
+            <div *ngIf="f.entry_title.errors.minlength">Za krótki tytuł </div>
           </div>
-          <div class="col-sm-3 col-md-3 col-3 col-lg-2">
-            <button type="submit"class="btn btn-primary">Stworz Post</button>
+        </div>
+
+        <div class="field">
+         <label class="boxLabel" >Treść artykułu</label><br>
+
+          <textarea class="form-control" matInput rows="20" cols="160" formControlName="entry_text" placeholder="Wpisz Tekst"
+           [ngClass]="{ 'is-invalid': submitted && f.entry_text.errors }"></textarea>
+          <div *ngIf="submitted && f.entry_text.errors" class="invalid-feedback">
+            <div *ngIf="f.entry_text.errors.required">Tekst jest wymagany </div>
+            <div *ngIf="f.entry_text.errors.minlength">Za krótki tekst </div>
           </div>
+        </div>
+        <div id="wrapper">
+        <div class="fieldfile">
+
+          <input type="file" id="file" name="image" (change)="onFileSelected($event)" />
+           <label for="file" class="inputfile">
+          <span>Wybierz Plik</span>
+          </label>
 
         </div>
+
+        <div class="fieldsubmit">
+          <button type="submit" class="btn btnsubmit btn-primary">Stworz Post</button>
         </div>
+      </div>
 
        </form>
-
-    </div>
-  </div>
-
-  <!-- Pagination -->
+</div>
 
 

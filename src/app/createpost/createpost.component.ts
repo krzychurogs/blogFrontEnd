@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Post } from '../model/post';
 import { ServicesPostService } from '../services-post/services-post.service';
 
@@ -11,9 +11,16 @@ import { ServicesPostService } from '../services-post/services-post.service';
 export class CreatepostComponent implements OnInit {
   selectedFile: any = null;
   myDate = new Date();
+  submitted = false;
   myForm = new FormGroup({
-    entry_title: new FormControl(''),
-    entry_text: new FormControl(''),
+    entry_title: new FormControl('', [
+      Validators.minLength(15),
+      Validators.required,
+    ]),
+    entry_text: new FormControl('', [
+      Validators.minLength(100),
+      Validators.required,
+    ]),
     entry_author: new FormControl(localStorage.getItem('userid')),
     date: new FormControl(this.myDate),
   });
@@ -27,8 +34,16 @@ export class CreatepostComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  get f() {
+    return this.myForm.controls;
+  }
+
   onSubmit() {
+    this.submitted = true;
     const formData = new FormData();
+    if (this.myForm.invalid) {
+      return;
+    }
     for (const key in this.myForm.value) {
       formData.append(key, this.myForm.value[key]);
     }

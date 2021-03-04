@@ -1,4 +1,28 @@
-<input [(ngModel)]="register.username" placeholder="username"><br>
-<input [(ngModel)]="register.password" placeholder="password"><br>
-<input [(ngModel)]="register.email" placeholder="mail"><br>
-<button (click)="registerC()">Register User</button>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<div class="tlo">
+
+
+<div class="login">
+
+  <div class="login-form">
+
+    <h3>Username:</h3>
+    <input type="text" [(ngModel)]="register.username"   placeholder="Username"/><br>
+    <h3>Hasło:</h3>
+    <input type="password" [(ngModel)]="register.password" placeholder="Password"/>
+    <br>
+    <h3>Powtórzone Hasło:</h3>
+    <input type="password" placeholder="Password"/>
+    <br>
+    <h3>Email:</h3>
+    <input type="text" [(ngModel)]="register.email"  placeholder="Mail"/>
+    <br>
+    <button type="submit"class="btn btn-primary" (click)="registerC()">Stwórz Konto</button>
+    <br>
+
+    <br>
+
+  </div>
+</div>
+
+</div>

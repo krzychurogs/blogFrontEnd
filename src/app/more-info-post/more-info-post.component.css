@@ -1,0 +1,33 @@
+.textHeader {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+.textHeader .image {
+  height: 500px;
+  margin-left: 0%;
+
+  justify-content: center;
+}
+
+.textHeader .par {
+  display: block;
+  text-align: justify;
+}
+.example-card {
+  margin-top: 4px;
+
+  margin-left: 10%;
+  margin-right: 5%;
+}
+.textContinue {
+  margin-top: 10px;
+  text-align: justify;
+}
+.rotated {
+  transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+}
+.tlo {
+  background-image: url("/../assets/pobrane.jpg");
+}

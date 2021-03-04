@@ -1,0 +1,24 @@
+
+<div class="mat-elavation z8">
+  <mat-table [dataSource]="listData" matSort>
+      <ng-container matColumnDef="author">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Autor</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.entry_author.username}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="totalLikes">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Całkowita liczba polubień</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.totalLikes}}</mat-cell>
+      </ng-container>
+       <ng-container matColumnDef="actions">
+        <mat-header-cell   routerLinkActive="router-link-active"  *matHeaderCellDef>Przejdz do blogu użytkownika</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button mat-icon-button [routerLink]="['/bloguser',element.entry_author.id]" routerLinkActive="router-link-active" ><mat-icon>launch</mat-icon></button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row  *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row;columns:displayedColumns" ></mat-row>
+
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[1,3,6,100]" [pageSize]="3"></mat-paginator>
+
+</div>

@@ -3,15 +3,113 @@
   margin-right: 20%;
   margin-bottom: 10px;
 }
+#wrapper {
+  overflow: auto;
+  margin-left: 10%;
+  margin-right: 20%;
 
-.headerF {
-  padding: 0.5rem 1rem;
-  text-align: center;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 10px;
 }
-
+.fieldfile {
+  float: left;
+}
+.fieldsubmit {
+  float: right;
+}
 .submitM {
   margin-left: auto;
+}
+.textareaClas {
+  box-sizing: border-box;
+  max-width: 50%;
+}
+.box {
+  background-color: white;
+  border-radius: 25px;
+  height: 80%;
+  left: 50%;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: 2;
+  color: rgb(23, 84, 240);
+}
+.boxheader {
+  font-size: 32px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.boxLabel {
+  padding-bottom: 5px;
+  font-size: large;
+}
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+[type="file"] + label :hover {
+  background-color: darken(#f15d22, 10%);
+}
+
+.inputfile {
+  background-color: #ee6d9e;
+  overflow: hidden;
+}
+
+[type="file"] + label.inputfile:hover {
+  background-color: #ae144f;
+}
+[type="file"] + label.inputfile {
+  background-color: #ae144f;
+  border-radius: 0;
+  overflow: hidden;
+}
+[type="file"] + label.inputfile span {
+  display: inline-block;
+  height: 100%;
+  transition: all 0.3s;
+  width: 100%;
+}
+[type="file"] + label.inputfile::before {
+  color: #fff;
+  content: "\f1ea";
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+  font-size: 130%;
+  height: 100%;
+  line-height: 2.6;
+  position: absolute;
+  top: -180%;
+  transition: all 0.3s;
+  width: 100%;
+}
+[type="file"] + label.inputfile:hover {
+  background-color: #ae144f;
+}
+[type="file"] + label.inputfile:hover span {
+  transform: translateY(300%);
+}
+[type="file"] + label.inputfile:hover::before {
+  top: 0;
 }

@@ -1,1 +1,25 @@
-<p>more-info-post works!</p>
+<div class="tlo">
+  <mat-card class="example-card"  *ngFor="let entry of listOfEntries">
+
+    <div class="textHeader" >
+        <h1>{{entry.entry_title}}</h1>
+        <p class="par">
+          {{entry.entry_text|slice:0:500}}'
+        </p>
+        <img  class="image" src="{{entry.image}}"  >
+
+    </div>
+
+
+    <div class="textContinue">
+      {{entry.entry_text|slice:0:1000}}'
+    </div>
+  <app-createcomment [idPost]="idEntry"></app-createcomment>
+
+</mat-card>
+
+</div>
+
+
+
+
