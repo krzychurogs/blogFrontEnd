@@ -1,4 +1,4 @@
-import { UserData } from './user';
+import { UserData } from './userdata';
 export interface Post {
   id: number;
   entry_title?: string;

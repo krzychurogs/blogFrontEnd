@@ -1,5 +1,6 @@
-export interface UserData {
-  email: string;
-  username: string;
-  id?: number;
+import { UserData } from './userdata';
+
+export interface User {
+  user: UserData;
+  avatar: String;
 }

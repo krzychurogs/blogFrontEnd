@@ -1,7 +1,7 @@
 import { element } from 'protractor';
 import { AuthService } from './../services-auth/auth.service';
 import { Message } from './../model/message';
-import { UserData } from './../model/user';
+import { User } from './../model/user';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 import { ChatService } from '../services-chat/chat.service';
@@ -16,6 +16,7 @@ import { ScrollToBottomDirective } from './scroll-to-bottom.directive';
 export class ChatlistComponent implements OnInit {
   receiverID: any;
   receiverName: any;
+  receiverImg: any;
   startId: any;
   senderId: any;
   searchTerm: string = '';
@@ -23,10 +24,10 @@ export class ChatlistComponent implements OnInit {
   messagesSender: Array<Message> = [];
   messagesReceiver: Array<Message> = [];
   records: any;
-  sender?: UserData;
-  receiver?: UserData;
-  @Input()
-  private userid: any;
+  sender?: User;
+  receiver?: User;
+
+  userid: any;
   senderCheckReceiver: boolean = false;
   senderCheckSender: boolean = false;
   listOfUsers: Array<Message> = [];
@@ -47,8 +48,8 @@ export class ChatlistComponent implements OnInit {
       this.listOfUsers = this.listOfUsers.filter(
         (element, i) => i === this.listOfUsers.indexOf(element)
       );
-      console.log(this.listOfUsers);
-      this.startId = this.listOfUsers[0].receiver.id;
+
+      this.startId = this.listOfUsers[0].receiver.user.id;
       this.getChatMessage(this.startId);
     });
   }
@@ -56,10 +57,14 @@ export class ChatlistComponent implements OnInit {
     console.log('reci' + id);
     this.messagesReceiver = [];
     this.service.getChatMessage(id).subscribe((chat: any) => {
-      this.messages = chat.messages;
+      console.log(chat);
+      console.log('m' + chat.messages.message);
+
       this.senderId = chat.sender.id;
       this.receiverID = chat.receiver.id;
-      this.receiverName = chat.receiver.username;
+      this.receiverImg = chat.receiver.avatar;
+      console.log('im' + chat.receiver.avatar);
+      this.receiverName = chat.receiver.user;
       console.log(chat);
       this.receiver = chat.receiver;
       this.sender = chat.sender;

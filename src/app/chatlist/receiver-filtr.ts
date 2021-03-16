@@ -11,7 +11,7 @@ export class ReceiverFilterPipe implements PipeTransform {
     }
     return receiver.filter(
       (receiver) =>
-        receiver.receiver.username
+        receiver.receiver.user.username
           .toLocaleLowerCase()
           .indexOf(searchTerm.toLocaleLowerCase()) !== -1
     );

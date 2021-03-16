@@ -24,6 +24,10 @@
   height: 70px;
   margin-right: 30px;
 }
+.message {
+  display: flex;
+  flex-direction: column;
+}
 .messageList {
   margin-right: 10px;
   position: absolute;
@@ -38,7 +42,7 @@
   flex-direction: column;
   background-color: #f1f1f1;
 }
-.receiver {
+.message-wrapper {
   width: 100%;
   overflow-y: scroll;
   display: flex;
@@ -51,16 +55,58 @@
   position: relative;
   padding: 10px;
 }
+.message-wrapper .sender {
+  align-self: flex-end;
+  background-color: #6fbced;
+  color: white;
+  border-radius: 4px;
+  margin-top: 6px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+  border: solid 2px #dedede;
+}
+.message-wrapper .receiv {
+  align-self: flex-start;
+  margin-right: 30px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 4px;
+  text-align: right;
+  background-color: #58b666;
+  border: solid 2px #dedede;
+}
+.message-wrapper .senderSpan {
+  align-self: flex-end;
+  font-size: 14px;
+}
+.message-wrapper .senderReceiv {
+  font-size: 14px;
+  align-self: flex-start;
+}
 .infUser {
-  height: 10%;
-  position: relative;
+  height: 13%;
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   background-color: #374455;
 }
+.infNick {
+  display: flex;
+  align-self: center;
+}
+.infButton {
+  display: flex;
+
+  align-self: center;
+}
+
 .infUser h1 {
-  font-weight: normal;
-  text-align: center;
-  justify-content: center;
+  margin-top: 15px;
+  margin-left: 5px;
   color: green;
   font-size: 1.75em;
 }
@@ -70,42 +116,16 @@
   line-height: 200%;
   width: 100%;
 }
+.nameUser img {
+  width: 90px;
+}
 .nameUser input {
   margin-bottom: 20px;
   color: white;
   background-color: #5e616a;
   width: 100%;
 }
-.sender {
-  background-color: #6fbced;
-  color: white;
-  max-width: min-content;
-  max-height: min-content;
 
-  margin-left: 5px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: flex-start;
-  border: solid 2px #dedede;
-  align-items: center;
-  height: 7%;
-}
-.receiv {
-  margin-right: 30px;
-
-  margin-bottom: 30px;
-  margin-top: 10px;
-  color: white;
-  text-align: right;
-  display: flex;
-  justify-content: flex-end;
-  background-color: #58b666;
-  border: solid 2px #dedede;
-  align-items: center;
-
-  max-width: min-content;
-  height: 7%;
-}
 .lastsender {
   margin-bottom: 0px;
 }
@@ -116,16 +136,6 @@
   position: absolute;
 }
 
-.receiv span {
-  color: #bbb;
-  margin-bottom: 60px;
-  font-size: 13px;
-  position: absolute;
-}
-.time-right {
-  float: right;
-  color: #aaa;
-}
 .formMessage {
   position: absolute;
   bottom: 0;
@@ -136,7 +146,6 @@
 }
 .addCom {
   width: 90%;
-
   height: 30px;
 }
 .addBtn {
