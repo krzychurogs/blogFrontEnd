@@ -34,7 +34,8 @@ Chat
     <li>Chat for logged Users</li>
     <li>Searching by name</li>
   </ul> 
-</li>  
+</li>
+</ul>
   
 ## Technology stack
 
