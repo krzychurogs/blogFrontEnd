@@ -28,7 +28,7 @@ Blog
     <li>Possibilty of delete,update created posts</li>
   </ul> 
 </li>
-  
+<li>  
 Chat
   <ul>
     <li>Chat for logged Users</li>
