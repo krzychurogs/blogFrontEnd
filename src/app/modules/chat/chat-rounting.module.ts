@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/app/core/guards/auth.guard';
 import { ChatlistComponent } from './components/chatlist/chatlist.component';
 
 /**
@@ -8,7 +9,7 @@ import { ChatlistComponent } from './components/chatlist/chatlist.component';
 
 const routes: Routes = [
   { path: '*', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'chat', component: ChatlistComponent },
+  { path: 'chat', component: ChatlistComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

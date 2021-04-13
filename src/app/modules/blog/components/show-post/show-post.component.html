@@ -1,4 +1,7 @@
 <div class="tlo">
+
+
+
   <section class="card-row">
     <article class="card" *ngFor="let entry of listOfEntries">
       <div>
@@ -10,7 +13,7 @@
     </div>
      <div class="text-wrapper">
       <p>
-        {{entry.entry_text|slice:0:1000}}
+        {{entry.entry_text|slice:0:600}}
       </p>
      </div>
       <div  class="button" color="primary"  [routerLink]="['/moredetail', entry.id]" ><mat-icon>visibility</mat-icon> More</div>

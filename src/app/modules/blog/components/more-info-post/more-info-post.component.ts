@@ -18,7 +18,7 @@ export class MoreInfoPostComponent implements OnInit {
     private serviceUserPost: ServicesPostService
   ) {
     this.route.params.subscribe((params: any) => {
-      console.log(params.id);
+      console.log('param' + params.id);
       this.idEntry = params.id;
     });
     this.getPost();

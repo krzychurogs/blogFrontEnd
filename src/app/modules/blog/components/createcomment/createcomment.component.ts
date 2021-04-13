@@ -13,20 +13,26 @@ export class CreatecommentComponent implements OnInit {
   listOfComments: Array<IComments> = [];
   @Input()
   idPost!: any;
+  idUser: any;
   myForm = new FormGroup({
     comment_title: new FormControl(''),
     comment_text: new FormControl(''),
     date: new FormControl(this.myDate),
-    users: new FormControl(localStorage.getItem('userid')),
-    post: new FormControl(11),
   });
 
-  constructor(private httpservice: ServicesPostService) {}
+  constructor(private httpservice: ServicesPostService) {
+    console.log('d' + localStorage.getItem('userid'));
+    this.idUser = localStorage.getItem('userid');
+    console.log('com' + this.idPost);
+  }
   onSubmit() {
     const formData = new FormData();
     for (const key in this.myForm.value) {
       formData.append(key, this.myForm.value[key]);
     }
+    console.log('ajdi' + this.idUser);
+    formData.append('comment_author', this.idUser);
+    formData.append('post', this.idPost);
 
     this.httpservice
       .createComment(formData)

@@ -3,9 +3,10 @@
 <span> <mat-icon>accessibility</mat-icon> Blog </span>
 <div class="spacer"></div>
 <a mat-button routerLink="posty">Posty</a>
-<a mat-button routerLink="userposts">Twoje Posty</a>
-<a mat-button routerLink="createpost">Stworz Post</a>
-<a mat-button routerLink="chat">Chat</a>
+
+<a mat-button routerLink="userposts" *ngIf="show==true">Twoje Posty</a>
+<a mat-button routerLink="createpost" *ngIf="show==true">Stworz Post</a>
+<a mat-button routerLink="chat" *ngIf="show==true">Chat</a>
 <a mat-button routerLink="userblogs">Blogi Użytkowników</a>
 <a mat-raised-button color="accent" routerLink="login" *ngIf="show==false">Log in</a>
 <a mat-raised-button color="accent" (click)="onLogout()"  *ngIf="show==true">Log out</a>
