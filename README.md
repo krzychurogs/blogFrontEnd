@@ -1,8 +1,7 @@
 # BlogFront
 
 
-## Descryption
-
+## Description
 Application allows users to create and read blogs. Its possibility give like, because created reputation system and an option to comment specyfic post.It also has social media aspect that might help to communicate with each other users thanks to chat beetween users.
 
 
