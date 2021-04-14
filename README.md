@@ -55,15 +55,15 @@ Chat
 <br>
 3.Detail Page
 ![](Readme/deatail1.JPG)
-<br>
+&nbsp;
 4.Comments Post
 ![](Readme/comment.JPG)
-<br>
+&nbsp;
 5.CRUD Menu
 ![](Readme/our.JPG)
-<br>
+&nbsp;
 6.View Other Blogs
 ![](Readme/viewblog.JPG)
-<br>
+&nbsp;
 7.Chat
 ![](Readme/chat.JPG)
