@@ -52,18 +52,17 @@ Chat
 ![](Readme/login.JPG)
 2.Main Page
 ![](Readme/first.JPG)
-<br />
+
 3.Detail Page
-<br />
 ![](Readme/deatail1.JPG)
 4.Comments Post
 ![](Readme/comment.JPG)
-<br />
+
 5.CRUD Menu
 ![](Readme/our.JPG)
-<br />
+
 6.View Other Blogs
 ![](Readme/viewblog.JPG)
-<br />
+/>
 7.Chat
 ![](Readme/chat.JPG)
