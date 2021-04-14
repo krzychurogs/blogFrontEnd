@@ -46,3 +46,19 @@ Chat
   <li>SCSS</li>
   <li>AgmMap</li>
 </ul>  
+
+## Screens From App
+1. Login Page
+![](Readme/login.JPG)
+2.Main Page
+![](Readme/first.JPG)
+3.Detail Page
+![](Readme/deatail1.jpg)
+4.Comments Post
+![](Readme/comment.jpg)
+5.CRUD Menu
+![](Readme/our.jpg)
+5.View Other Blogs
+![](Readme/viewblog.jpg)
+6.Chat
+![](Readme/chat.jpg)
