@@ -2,8 +2,7 @@
 
 
 ## Description
-Application allows users to create and read blogs. Its possibility give like, because created reputation system and an option to comment specyfic post.It also has social media aspect that might help to communicate with each other users thanks to chat beetween users.
-
+Application allows users to create and read blogs. Application allows users to create and read blogs. Application follows social media apps. It enables user to react at posts - like or comment. Moreover, this program includes chat, which allows to communicate with other users. In this application was created reputation post system.
 
 
 
@@ -23,7 +22,7 @@ Blog
     <li>Creating blogs by logged user</li>
     <li>Give likes by logged user</li>
     <li>Viewing detail of post with number of likes and comments </li>
-    <li>Creating comment of post by logged </li>
+    <li>Creating comment of post by logged user</li>
     <li>Viewing other blog</li>
     <li>Possibilty of delete,update created posts</li>
   </ul> 
