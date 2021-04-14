@@ -40,11 +40,11 @@ Chat
 ## Technology stack
 
 <ul>
-  <li>Angular 9</li>
+  <li>Angular 11</li>
   <li>Angular material</li>
   <li>RxJs</li>
-  <li>SCSS</li>
-  <li>AgmMap</li>
+  <li>CSS</li>
+  
 </ul>  
 
 ## Screens From App
