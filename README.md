@@ -63,6 +63,6 @@ Chat
 
 6.View Other Blogs
 ![](Readme/viewblog.JPG)
-/>
+
 7.Chat
 ![](Readme/chat.JPG)
