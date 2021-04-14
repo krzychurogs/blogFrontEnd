@@ -54,8 +54,8 @@ Chat
 ![](Readme/first.JPG)
 <br />
 3.Detail Page
-![](Readme/deatail1.JPG)
 <br />
+![](Readme/deatail1.JPG)
 4.Comments Post
 ![](Readme/comment.JPG)
 <br />
